@@ -1,0 +1,4 @@
+#selectComponent div[id^="react-select"] {
+  min-width: 140px;
+  z-index: 2;
+}

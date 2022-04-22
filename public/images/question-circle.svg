@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ED38B1E8-8F9F-458C-BDE1-02769C812E76</title>
+    <g id="FE-Assignments" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="FE1b" transform="translate(-31.000000, -660.000000)" stroke="#FFFFFF" stroke-width="1.0625">
+            <g id="Tabs" transform="translate(20.000000, 101.000000)">
+                <g id="Need-Help" transform="translate(11.000000, 556.000000)">
+                    <g id="question-circle" transform="translate(0.000000, 3.000000)">
+                        <path d="M6.375,6.375 C6.37520636,5.29438735 7.18636308,4.38600717 8.26006543,4.2639948 C9.33376778,4.14198242 10.3280613,4.84519654 10.5707267,5.89820997 C10.813392,6.9512234 10.2271447,8.01867076 9.20833333,8.378875 C8.78362242,8.52903291 8.49976384,8.93069281 8.5,9.38116667 L8.5,10.09375" id="Path" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M8.5,12.21875 C8.35329936,12.21875 8.234375,12.3376744 8.234375,12.484375 C8.234375,12.6310756 8.35329936,12.75 8.5,12.75 C8.64670064,12.75 8.765625,12.6310756 8.765625,12.484375 C8.765625,12.3376744 8.64670064,12.21875 8.5,12.21875 L8.5,12.21875" id="Path" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <circle id="Oval" cx="8.5" cy="8.5" r="7.96875"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
