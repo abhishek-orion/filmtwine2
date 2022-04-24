@@ -17,12 +17,11 @@ import { FilmReviewData } from "../../constants/reviewMockData";
 
 const FilmInfo = ({ filmId }) => {
   const [moreFilmData, setMoreFilmData] = React.useState(null);
-  const FetchMoreFilmInfo = () =>
-    React.useCallback(() => {
-      return fetch(
-        `https://api.themoviedb.org/3/movie/${filmId}?api_key=93e78909d263b5016e3e8576ec69af0c&language=en-US`
-      ).then((res) => res.json());
-    }, [filmId]);
+  const FetchMoreFilmInfo = React.useCallback(() => {
+    return fetch(
+      `https://api.themoviedb.org/3/movie/${filmId}?api_key=93e78909d263b5016e3e8576ec69af0c&language=en-US`
+    ).then((res) => res.json());
+  }, [filmId]);
 
   React.useEffect(() => {
     FetchMoreFilmInfo().then((data) => setMoreFilmData(data));

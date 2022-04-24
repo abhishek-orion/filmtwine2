@@ -18,14 +18,13 @@ const FilmViewContextProvider = ({ children }) => {
   const [columnVisibilityMap, setColumnVisibilityMap] =
     React.useState(VisibilityMap);
 
-  const FetchMoviesData = () =>
-    React.useCallback(() => {
-      return fetch(
-        `https://api.themoviedb.org/3/discover/movie?api_key=93e78909d263b5016e3e8576ec69af0c&language=en-US&page=${state.paginationInfo.currentPage}`
-      ).then((res) => {
-        return res.json();
-      });
-    }, [state.paginationInfo.currentPage]);
+  const FetchMoviesData = React.useCallback(() => {
+    return fetch(
+      `https://api.themoviedb.org/3/discover/movie?api_key=93e78909d263b5016e3e8576ec69af0c&language=en-US&page=${state.paginationInfo.currentPage}`
+    ).then((res) => {
+      return res.json();
+    });
+  }, []);
 
   React.useEffect(() => {
     dispatch({
