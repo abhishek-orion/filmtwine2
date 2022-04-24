@@ -26,7 +26,7 @@ const FilmView = () => {
     fetchMovieData().then((movieData) => {
       setMovieData(movieData.results[0]);
     });
-  }, []);
+  }, [fetchMovieData]);
 
   const startResize = (event) => {
     setDragging(true);

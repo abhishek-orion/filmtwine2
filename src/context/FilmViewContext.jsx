@@ -22,7 +22,6 @@ const FilmViewContextProvider = ({ children }) => {
     return fetch(
       `https://api.themoviedb.org/3/discover/movie?api_key=93e78909d263b5016e3e8576ec69af0c&language=en-US&page=${state.paginationInfo.currentPage}`
     ).then((res) => {
-      //   "https://api.themoviedb.org/3/movie/634649/videos?api_key=93e78909d263b5016e3e8576ec69af0c&language=en-US"
       return res.json();
     });
   };
@@ -50,7 +49,7 @@ const FilmViewContextProvider = ({ children }) => {
         paginationInfo,
       });
     });
-  }, [state.paginationInfo.currentPage]);
+  }, [state.paginationInfo.currentPage, fetchMovieData]);
 
   const onSortOrderChange = (order) => {
     dispatch({

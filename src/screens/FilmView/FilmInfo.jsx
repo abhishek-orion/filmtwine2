@@ -25,7 +25,7 @@ const FilmInfo = ({ filmId }) => {
 
   React.useEffect(() => {
     fetchMoreFilmInfo().then((data) => setMoreFilmData(data));
-  }, []);
+  }, [fetchMoreFilmInfo]);
 
   console.log(moreFilmData);
   if (!moreFilmData) {
