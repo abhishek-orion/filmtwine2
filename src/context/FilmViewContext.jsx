@@ -24,7 +24,7 @@ const FilmViewContextProvider = ({ children }) => {
     ).then((res) => {
       return res.json();
     });
-  }, []);
+  }, [state.paginationInfo.currentPage]);
 
   React.useEffect(() => {
     dispatch({
