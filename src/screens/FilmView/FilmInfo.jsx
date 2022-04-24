@@ -17,17 +17,17 @@ import { FilmReviewData } from "../../constants/reviewMockData";
 
 const FilmInfo = ({ filmId }) => {
   const [moreFilmData, setMoreFilmData] = React.useState(null);
-  const fetchMoreFilmInfo = () => {
-    return fetch(
-      `https://api.themoviedb.org/3/movie/${filmId}?api_key=93e78909d263b5016e3e8576ec69af0c&language=en-US`
-    ).then((res) => res.json());
-  };
+  const fetchMoreFilmInfo = () =>
+    React.useCallback(() => {
+      return fetch(
+        `https://api.themoviedb.org/3/movie/${filmId}?api_key=93e78909d263b5016e3e8576ec69af0c&language=en-US`
+      ).then((res) => res.json());
+    }, [filmId]);
 
   React.useEffect(() => {
     fetchMoreFilmInfo().then((data) => setMoreFilmData(data));
   }, [fetchMoreFilmInfo]);
 
-  console.log(moreFilmData);
   if (!moreFilmData) {
     return null;
   }

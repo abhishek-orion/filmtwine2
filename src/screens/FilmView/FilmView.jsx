@@ -14,13 +14,14 @@ const FilmView = () => {
   const { filmId } = useParams();
   const [movieData, setMovieData] = React.useState(null);
 
-  const fetchMovieData = () => {
-    return fetch(
-      `https://api.themoviedb.org/3/movie/${filmId}/videos?api_key=93e78909d263b5016e3e8576ec69af0c&language=en-US`
-    ).then((res) => {
-      return res.json();
-    });
-  };
+  const fetchMovieData = () =>
+    React.useCallback(() => {
+      return fetch(
+        `https://api.themoviedb.org/3/movie/${filmId}/videos?api_key=93e78909d263b5016e3e8576ec69af0c&language=en-US`
+      ).then((res) => {
+        return res.json();
+      });
+    }, [filmId]);
 
   React.useEffect(() => {
     fetchMovieData().then((movieData) => {
