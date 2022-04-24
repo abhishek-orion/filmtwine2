@@ -18,7 +18,7 @@ const FilmViewContextProvider = ({ children }) => {
   const [columnVisibilityMap, setColumnVisibilityMap] =
     React.useState(VisibilityMap);
 
-  const fetchMovieData = () =>
+  const FetchMoviesData = () =>
     React.useCallback(() => {
       return fetch(
         `https://api.themoviedb.org/3/discover/movie?api_key=93e78909d263b5016e3e8576ec69af0c&language=en-US&page=${state.paginationInfo.currentPage}`
@@ -38,7 +38,7 @@ const FilmViewContextProvider = ({ children }) => {
     dispatch({
       type: "FETCH_DATA_START",
     });
-    fetchMovieData().then((data) => {
+    FetchMoviesData().then((data) => {
       let paginationInfo = {
         total: data.total_results,
         currentPage: data.page,
@@ -50,7 +50,7 @@ const FilmViewContextProvider = ({ children }) => {
         paginationInfo,
       });
     });
-  }, [state.paginationInfo.currentPage, fetchMovieData]);
+  }, [state.paginationInfo.currentPage, FetchMoviesData]);
 
   const onSortOrderChange = (order) => {
     dispatch({

@@ -14,7 +14,7 @@ const FilmView = () => {
   const { filmId } = useParams();
   const [movieData, setMovieData] = React.useState(null);
 
-  const fetchMovieData = () =>
+  const FetchMovieData = () =>
     React.useCallback(() => {
       return fetch(
         `https://api.themoviedb.org/3/movie/${filmId}/videos?api_key=93e78909d263b5016e3e8576ec69af0c&language=en-US`
@@ -24,10 +24,10 @@ const FilmView = () => {
     }, [filmId]);
 
   React.useEffect(() => {
-    fetchMovieData().then((movieData) => {
+    FetchMovieData().then((movieData) => {
       setMovieData(movieData.results[0]);
     });
-  }, [fetchMovieData]);
+  }, [FetchMovieData]);
 
   const startResize = (event) => {
     setDragging(true);

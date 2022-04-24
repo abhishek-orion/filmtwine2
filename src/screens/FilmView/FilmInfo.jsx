@@ -17,7 +17,7 @@ import { FilmReviewData } from "../../constants/reviewMockData";
 
 const FilmInfo = ({ filmId }) => {
   const [moreFilmData, setMoreFilmData] = React.useState(null);
-  const fetchMoreFilmInfo = () =>
+  const FetchMoreFilmInfo = () =>
     React.useCallback(() => {
       return fetch(
         `https://api.themoviedb.org/3/movie/${filmId}?api_key=93e78909d263b5016e3e8576ec69af0c&language=en-US`
@@ -25,8 +25,8 @@ const FilmInfo = ({ filmId }) => {
     }, [filmId]);
 
   React.useEffect(() => {
-    fetchMoreFilmInfo().then((data) => setMoreFilmData(data));
-  }, [fetchMoreFilmInfo]);
+    FetchMoreFilmInfo().then((data) => setMoreFilmData(data));
+  }, [FetchMoreFilmInfo]);
 
   if (!moreFilmData) {
     return null;
